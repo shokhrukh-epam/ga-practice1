@@ -1,0 +1,8 @@
+name: Output issues
+on: workflow_dispatch
+jobs:
+    info:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Output issues context
+              run: echo "${{ github.event.issue }}"
