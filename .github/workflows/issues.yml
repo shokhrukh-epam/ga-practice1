@@ -4,5 +4,7 @@ jobs:
     info:
         runs-on: ubuntu-latest
         steps:
-            - name: Output issues context
-              run: echo "${{ toJson(github) }}"
+            - name: has_issues
+              run: echo "${{ toJson(github.event.repository.has_issues) }}"
+            - name: open_issues_count
+              run: echo "${{ toJson(github.event.repository.open_issues_count) }}"
